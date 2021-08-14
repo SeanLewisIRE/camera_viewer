@@ -1,0 +1,17 @@
+{
+    "cameras": [
+        {
+            "camera_count": 2,
+            "camera_responses": [
+                {
+                    "url": "https://c.tenor.com/mABPo_j1CNUAAAAC/security-camera-closed-circuit-television.gif",
+                    "pass_fail": "pass"
+                },
+                {
+                    "url": "https://data.photofunky.net/output/image/9/1/0/1/910137/photofunky.gif",
+                    "pass_fail": "fail"
+                }
+            ]
+        }
+    ]
+}
