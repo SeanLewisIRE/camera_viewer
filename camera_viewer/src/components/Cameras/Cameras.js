@@ -40,8 +40,9 @@ const Cameras = (props) => {
     return (
         <div>
             <NavBar userName={props.userName}/>
-            <h1 className="text-2xl font-bold text-gray-700 mx-auto text-center">Active Cameras: {cameraData.cameraCount}</h1>
+            <h1 className="text-2xl font-bold text-gray-700 mx-auto my-2 text-center">Active Cameras: {cameraData.cameraCount}</h1>
             
+            <div className=" h-screen w-full flex flex-col md:flex-row justify-around">
             {cameraData.cameraResponses.map((camera, index) => {
                 return(
                     <CameraCard 
@@ -52,7 +53,7 @@ const Cameras = (props) => {
                     />
                 )
             })}
-                
+            </div>
         </div>
     )
 }

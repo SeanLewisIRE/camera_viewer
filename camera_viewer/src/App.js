@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import LoginPage from './components/LoginPage/LoginPage';
-import Cameras from './components/Cameras/Cameras'
+import Cameras from './components/Cameras/Cameras';
+import Settings from './components/Settings/Settings';
+import Reporting from './components/Reporting/Reporting';
 import './http-common';
 import './App.css';
 import { useHistory } from 'react-router-dom';
@@ -15,11 +17,9 @@ function App() {
   
     let history = useHistory()
     const _handleSubmit = (e) => {
-      console.log("here")
       e.preventDefault();
       setUserName(inputValue)
       setInputValue("");
-      e.preventDefault();
       const loggedInPath = "/cameras"
       history.push(loggedInPath)
     }
@@ -33,11 +33,20 @@ function App() {
               />
           </Route>
 
+          <Route path="/reporting">
+            <Reporting/>
+          </Route>
+
+          <Route path="/settings">
+            <Settings />
+          </Route>
+
           <Route path="/">
             <LoginPage 
               value={inputValue}
               onSubmit={_handleSubmit}
               onChange={e => setInputValue(e.target.value)}            
+              userName={userName}
             />
           </Route>
 
