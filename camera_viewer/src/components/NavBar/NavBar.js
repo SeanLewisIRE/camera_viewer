@@ -5,7 +5,7 @@ import './NavBar.css'
 
 const NavBar = (props) => {
     return (
-        <nav className="block navbar container px-5 h-20 flex items-center justify-between">
+        <nav className="block navbar container px-5 h-20 flex items-center justify-between md:justify-around">
 
             <Link to={"/"} className="block px-2 py-2 " role="menuitem">
                 <img className="tems-center h-10" alt="Placeholder Logo" src={logo} />
