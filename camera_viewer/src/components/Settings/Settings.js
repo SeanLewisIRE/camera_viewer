@@ -1,10 +1,13 @@
 import React from 'react';
 import NavBar from '../NavBar/NavBar';
 
-const Settings = () => {
+const Settings = (props) => {
     return(
         <div>
-            <NavBar />
+            <NavBar 
+                userName={props.userName}
+                language={props.language}
+            />
             <h2>This is the settings page</h2>
         </div>
         

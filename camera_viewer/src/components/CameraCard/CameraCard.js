@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const CameraCard = (props) => {
     let status = false
@@ -7,9 +8,9 @@ const CameraCard = (props) => {
     }
 
     return (
-        <div className="h-2/5 p-4 bg-gray-100 flex justify-center items-center">
+        <div className="h-3/5 md:h-2/5 p-4 bg-gray-100 flex justify-center items-center">
             <div className="p-6 bg-white rounded-xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all transform duration-500">
-                <img className="w-64 h-40 object-cover rounded-t-md" src={props.url} alt="" />
+                <img className="w-64 h-40 object-cover rounded-md" src={props.url} alt="" />
                 <div className="mt-4">
                     <h1 className="text-1xl font-bold text-gray-700">Camera {props.index + 1}</h1>
                     <div className="mt-3 space-x-4 flex p-1 justify-between">
@@ -32,7 +33,9 @@ const CameraCard = (props) => {
                         
                     </div>
                     <div className="mt-4 mb-2 w-52 mx-auto">
-                        <button className="text-lg block font-semibold py-2 px-6 text-white hover:text-green-100 bg-green-400 rounded-lg shadow hover:shadow-md transition duration-300">{props.language.camSettings}</button>
+                        <Link to={"/settings"}>
+                            <button className="text-lg block font-semibold py-2 px-6 text-white hover:text-green-100 bg-green-400 rounded-lg shadow hover:shadow-md transition duration-300">{props.language.camSettings}</button>
+                        </ Link >
                     </div>
                 </div>
             </div>

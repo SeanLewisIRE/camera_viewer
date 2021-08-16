@@ -42,11 +42,17 @@ function App() {
           </Route>
 
           <Route path="/reporting">
-            <Reporting/>
+            <Reporting
+              userName={userName}
+              language={language}
+            />
           </Route>
 
           <Route path="/settings">
-            <Settings />
+            <Settings 
+              userName={userName}
+              language={language}
+            />
           </Route>
 
           <Route path="/">

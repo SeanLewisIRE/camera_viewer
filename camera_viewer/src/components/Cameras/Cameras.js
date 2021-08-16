@@ -43,9 +43,9 @@ const Cameras = (props) => {
                 userName={props.userName}
                 language={props.language}
             />
-            <h1 className="text-2xl font-bold text-gray-700 mx-auto my-2 text-center">Active Cameras: {cameraData.cameraCount}</h1>
+            <h1 className="text-2xl font-bold text-gray-700 mx-auto my-4 text-center">Active Cameras: {cameraData.cameraCount}</h1>
             
-            <div className=" h-screen w-full flex flex-col md:flex-row justify-around">
+            <div className="w-full flex flex-col md:flex-row justify-around">
             {cameraData.cameraResponses.map((camera, index) => {
                 return(
                     <CameraCard 

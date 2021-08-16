@@ -1,6 +1,8 @@
 import { React, useState, useEffect } from 'react';
 import logo from '../../static/icons/logo.png'
 import './LoginPage.css'
+
+
 const LoginPage = (props) => {
 
     const [toggleStatus, setToggleStatus] = useState(false)
@@ -44,7 +46,7 @@ const LoginPage = (props) => {
                 <input onClick={handleToggle} type="checkbox" name="toggle" id="toggle" className="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer" />
                 <label htmlFor="toggle" className="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer" ></label>
             </div>
-            <label htmlFor="toggle" className="text-xs text-gray-700">Toggle for French</label>
+            <label htmlFor="toggle" className="text-xs text-gray-700">French</label>
 
         </div>
     )
