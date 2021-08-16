@@ -2,10 +2,8 @@ import React from 'react'
 
 const CameraCard = (props) => {
     let status = false
-    let statusText = "Failed"
     if (props.status === "pass") {
         status = true
-        statusText = "Passing"
     }
 
     return (
@@ -17,14 +15,14 @@ const CameraCard = (props) => {
                     <div className="mt-3 space-x-4 flex p-1 justify-between">
                         {status ? 
                             <div className="flex items-center">
-                                <p>Camera Status: {statusText}</p>
+                                <p>{props.language.status}: {props.language.statusMessagePass}</p>
                                 <div className="ml-4 p-1 border-4 rounded-full cursor-pointer hover:border-green-200 hover:scale-105 transition transform duration-200">
                                     <span className="block h-6 w-6 bg-green-400 rounded-full"> </span>
                                 </div>
                             </div>
                         : 
                             <div className="flex items-center">
-                                <p>Camera Status: {statusText}</p>
+                                <p>{props.language.status}: {props.language.statusMessageFail}</p>
                                 <div className="ml-4 p-1 border-4 rounded-full cursor-pointer hover:border-red-200 hover:scale-105 transition transform duration-200">
                                     <span className="block h-6 w-6 bg-red-400 rounded-full"> </span>
                                 </div>
@@ -34,7 +32,7 @@ const CameraCard = (props) => {
                         
                     </div>
                     <div className="mt-4 mb-2 w-52 mx-auto">
-                        <button className="text-lg block font-semibold py-2 px-6 text-white hover:text-green-100 bg-green-400 rounded-lg shadow hover:shadow-md transition duration-300">Camera Settings</button>
+                        <button className="text-lg block font-semibold py-2 px-6 text-white hover:text-green-100 bg-green-400 rounded-lg shadow hover:shadow-md transition duration-300">{props.language.camSettings}</button>
                     </div>
                 </div>
             </div>

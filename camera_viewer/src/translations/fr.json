@@ -1,0 +1,13 @@
+{
+    "login": "Merci de vous connecter pour continuer",
+    "password": "le mot de passe",
+    "cameras": "Caméras Vidéo",
+    "reporting": "Rapporter",
+    "settings": "Les paramètres",
+    "options": "Options",
+    "camSettings": "Les paramètres de la caméra",
+    "status": "État de la caméra",
+    "statusMessagePass": "Passer",
+    "statusMessageFail": "Échouer",
+    "signOut": "Se déconnecter"
+}

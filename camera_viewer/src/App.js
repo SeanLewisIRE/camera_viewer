@@ -8,13 +8,16 @@ import './App.css';
 import { useHistory } from 'react-router-dom';
 
 import { Switch, Route } from 'react-router-dom';
-
+import english from './translations/en.json'
+import french from './translations/fr.json'
 
 function App() {
 
     const [userName, setUserName] = useState("");
     const [inputValue, setInputValue] = useState("")
-  
+    const [language, setLanguage] = useState(english)
+
+
     let history = useHistory()
     const _handleSubmit = (e) => {
       e.preventDefault();
@@ -24,12 +27,17 @@ function App() {
       history.push(loggedInPath)
     }
 
+    const _handleLanguageChange = () => {
+      setLanguage(french);
+    }
+
   return (
     <div className="App">
       <Switch>
           <Route path="/cameras">
               <Cameras 
                 userName={userName}
+                language={language}
               />
           </Route>
 
@@ -43,10 +51,12 @@ function App() {
 
           <Route path="/">
             <LoginPage 
+              language={language}
               value={inputValue}
               onSubmit={_handleSubmit}
               onChange={e => setInputValue(e.target.value)}            
               userName={userName}
+              langChange={_handleLanguageChange}
             />
           </Route>
 

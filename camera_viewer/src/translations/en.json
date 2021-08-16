@@ -1,0 +1,13 @@
+{
+    "login": "Please login to continue",
+    "password": "Password",
+    "cameras": "Cameras",
+    "reporting": "Reporting",
+    "settings": "Settings",
+    "options": "Options",
+    "camSettings": "Camera Settings",
+    "status": "Camera Status",
+    "statusMessagePass": "Passing",
+    "statusMessageFail": "Failed",
+    "signOut": "Sign Out"
+}

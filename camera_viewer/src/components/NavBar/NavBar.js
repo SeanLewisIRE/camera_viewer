@@ -4,6 +4,7 @@ import logo from '../../static/icons/logo.png'
 import './NavBar.css'
 
 const NavBar = (props) => {
+
     return (
         <nav className="block navbar container px-5 h-20 flex items-center justify-between md:justify-around">
 
@@ -12,13 +13,13 @@ const NavBar = (props) => {
             </Link>
 
             <Link to={"/cameras"} className="block px-2 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">
-                Cameras
+                {props.language.cameras}
             </Link>
             <Link to={"/reporting"} className="block px-2 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">
-                Reporting
+                {props.language.reporting}
             </Link>
             <Link to={"/settings"} className="block px-2 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">
-                Settings
+                {props.language.settings}
             </Link>
 
             <div className="flex flex-col justify-center ">
@@ -27,7 +28,7 @@ const NavBar = (props) => {
                         <span className="rounded-md shadow-sm">
                             <button className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium leading-5 text-gray-700 transition duration-150 ease-in-out bg-white border border-gray-300 rounded-md hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800"
                             type="button" aria-haspopup="true" aria-expanded="true" aria-controls="headlessui-menu-items-117">
-                                <span>Options</span>
+                                <span>{props.language.options}</span>
                                 <svg className="w-5 h-5 ml-2 -mr-1" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
                             </button>
                         </span>
@@ -36,7 +37,7 @@ const NavBar = (props) => {
                                     <p className="px-4 py-2 text-sm font-medium leading-5 text-gray-900 truncate">{props.userName}</p>
                                 <div className="py-1">
                                     <Link to={"/"} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">
-                                        Sign Out
+                                        {props.language.signOut}
                                     </Link>
                                 </div>
                             </div>
